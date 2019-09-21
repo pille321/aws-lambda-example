@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/pille321/aws-lambda-example.svg?branch=master)](https://travis-ci.com/pille321/aws-lambda-example)
+
+
 ~/my-function$ go get github.com/aws/aws-lambda-go/lambda
 ~/my-function$ GOOS=linux go build main.go
 
