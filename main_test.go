@@ -4,21 +4,23 @@ import "testing"
 
 func TestHandleLambdaEvent(t *testing.T) {
 
-    event := MyEvent {
-      Name: "Bob",
-      Age: 56,
-    }
+	event := MyEvent{
+		Name: "Bob",
+		Age:  56,
+	}
 
-    response := MyResponse {
-      Message: "Bob is 56 years old!",
-    }
+	response := MyResponse{
+		Message: "Bob is 56 years old!",
+	}
 
+	got, err := HandleLambdaEvent(event)
 
-		got, _ := HandleLambdaEvent(event)
+	if got != response {
+		t.Errorf("HandleLambdaEvent(%q) == %q, want %q", event, got, response)
+	}
 
-		if got != response {
-			t.Errorf("HandleLambdaEvent(%q) == %q, want %q", event, got, response)
-		}
-
+	if err != nil {
+		t.Errorf("HandleLambdaEvent second return value is not nil")
+	}
 
 }
