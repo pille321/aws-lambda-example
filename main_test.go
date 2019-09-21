@@ -9,7 +9,10 @@ func TestHandleLambdaEvent(t *testing.T) {
       Age: 56,
     }
 
-    response := MyResponse {Message: "Bob is 56 years old!"}
+    response := MyResponse {
+      Message: "Bob is 56 years old!",
+    }
+
 
 		got, _ := HandleLambdaEvent(event)
 
