@@ -14,11 +14,11 @@ func TestHandleLambdaEvent(t *testing.T) {
     }
 
 
-		got, _ := HandleLambdaEvent(event)
+    got, _ := HandleLambdaEvent(event)
 
-		if got != response {
-			t.Errorf("HandleLambdaEvent(%q) == %q, want %q", event, got, response)
-		}
+    if got != response {
+		t.Errorf("HandleLambdaEvent(%q) == %q, want %q", event, got, response)
+	}
 
 
 }
